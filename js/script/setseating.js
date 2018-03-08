@@ -362,7 +362,6 @@ require(["config"], function () {
 			e.preventDefault();
 			var isHasDl = $(this).find("dl");
 			var id = e.dataTransfer.getData("id");
-			console.log(id);
 			var flag = id.split("-")[0];
 			var tagName = e.target.nodeName.toLowerCase();
 			if (tagName == "li" && id != undefined) {
@@ -381,7 +380,14 @@ require(["config"], function () {
 		$(".dealerItem").on("dragstart", function (event) {
 			var e = window.event || event;
 			var id = this.id;
-			e.dataTransfer.setData("id", id);
+
+			var flag = $("#" + id).data("flag");
+
+			if (flag == undefined) {
+				e.dataTransfer.setData("id", id);
+			} else {
+				toastr.error("dealer已经在桌子上");
+			}
 		});
 		$(".dealerItem").on("dragover", function (event) {
 			var e = window.event || event;
@@ -409,20 +415,21 @@ require(["config"], function () {
 			var id = e.dataTransfer.getData("id");
 			var reg = /dealer/g;
 			var html = $("#" + id).html();
-
 			var tag = e.target.id;
-			if (reg.test(id)) {
-
-				if (tag != '') {
-					var ele = $("#" + tag);
-					var str = "<dl>" + html + "</dl>";
-					ele.html(str);
-					toastr.success("delaer放置成功");
+			if (id != '') {
+				if (reg.test(id)) {
+					if (tag != '') {
+						var ele = $("#" + tag);
+						var str = "<dl>" + html + "</dl>";
+						ele.html(str);
+						toastr.success("delaer放置成功");
+						$("#" + id).data("flag", "inSeat"); //设置dealer已经在桌子上
+					} else {
+						toastr.error("已经有delaer");
+					}
 				} else {
-					toastr.error("已经有delaer");
+					toastr.error("请将玩家放在玩家位");
 				}
-			} else {
-				toastr.error("请将玩家放在玩家位");
 			}
 		});
 
@@ -454,11 +461,8 @@ require(["config"], function () {
 
 				seat.each(function (id, list) {
 					var player = $(this).find("dl");
-
 					if (player.length == 1) {
-
 						var seating = player.data("seating");
-
 						var parmas = seating.split("|");
 						obj.player.push({
 							id: parmas[0],
@@ -469,12 +473,10 @@ require(["config"], function () {
 						playnum += 1;
 						obj.playNum = playnum;
 					} else {
-
 						obj.player.push({});
 					}
 				});
 				arr.push(obj);
-				console.log(arr);
 			});
 		});
 	});

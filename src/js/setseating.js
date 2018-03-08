@@ -407,14 +407,12 @@ require(["config"], function() {
 			e.preventDefault();
 			var isHasDl = $(this).find("dl")
 			var id = e.dataTransfer.getData("id");
-			console.log(id)
 			var flag = id.split("-")[0];
 			var tagName = e.target.nodeName.toLowerCase()
 			if(tagName == "li" && id != undefined) {
 				if(flag != "dealer") {
 					toastr.success("换坐成功");
 					e.target.appendChild(document.getElementById(id));
-
 				} else {
 					toastr.error("请将dealer放在dealer位");
 				}
@@ -427,7 +425,14 @@ require(["config"], function() {
 		$(".dealerItem").on("dragstart", function(event) {
 			let e = window.event || event;
 			let id = this.id;
-			e.dataTransfer.setData("id", id)
+
+			let flag = $("#" + id).data("flag")
+
+			if(flag == undefined) {
+				e.dataTransfer.setData("id", id)
+			} else {
+				toastr.error("dealer已经在桌子上")
+			}
 
 		})
 		$(".dealerItem").on("dragover", function(event) {
@@ -456,26 +461,22 @@ require(["config"], function() {
 			let id = e.dataTransfer.getData("id");
 			let reg = /dealer/g;
 			var html = $("#" + id).html();
-			
-			
-			
-			
-			
 			let tag = e.target.id;
-			if(reg.test(id)) {
-
-				if(tag != '') {
-					let ele = $("#" + tag);
-					let str = `<dl>${html}</dl>`;
-					ele.html(str)
-					toastr.success("delaer放置成功")
+			if(id != '') {
+				if(reg.test(id)) {
+					if(tag != '') {
+						let ele = $("#" + tag);
+						let str = `<dl>${html}</dl>`;
+						ele.html(str)
+						toastr.success("delaer放置成功")
+						$("#" + id).data("flag", "inSeat") //设置dealer已经在桌子上
+					} else {
+						toastr.error("已经有delaer")
+					}
 				} else {
-					toastr.error("已经有delaer")
+					toastr.error("请将玩家放在玩家位")
 				}
-			} else {
-				toastr.error("请将玩家放在玩家位")
 			}
-
 		})
 
 		$(".dealer-position").bind("contextmenu", function() {
@@ -488,7 +489,6 @@ require(["config"], function() {
 				alert("可以做些事情")
 			}
 		})
-
 
 		//确认换坐按钮点击
 		$("#changSeating").on("click", function() {
@@ -507,11 +507,8 @@ require(["config"], function() {
 
 				seat.each(function(id, list) {
 					let player = $(this).find("dl");
-
 					if(player.length == 1) {
-
 						let seating = player.data("seating");
-
 						let parmas = seating.split("|");
 						obj.player.push({
 							id: parmas[0],
@@ -523,14 +520,10 @@ require(["config"], function() {
 						obj.playNum = playnum;
 
 					} else {
-
 						obj.player.push({})
-
 					}
-
 				})
 				arr.push(obj);
-				console.log(arr)
 			})
 
 		})

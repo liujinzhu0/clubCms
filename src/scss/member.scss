@@ -1,0 +1,159 @@
+.member-wrap {
+    background: #f1f6fb;
+}
+
+.seach-header {
+    padding-top: 12px;
+    height: 70px;
+}
+
+.seach {
+    width: 248px;
+    height: 32px;
+    border-radius: 32px;
+    border: 1px solid #CCCCCC;
+    line-height: 30px;
+    overflow: hidden;
+    float: right;
+    margin-right: 80px;
+}
+
+.seach-btn {
+    float: left;
+    width: 40px;
+    height: 30px;
+    border-right: 1px solid #CCCCCC;
+    cursor: pointer;
+}
+
+.seach-text {
+    float: right;
+    display: block;
+    width: 206px;
+    height: 30px;
+    line-height: 30px;
+    text-indent: 12px;
+}
+.member-list {
+ 
+}
+.member-list thead{
+    background:#2C3243;
+    color: white;
+}
+
+
+
+.member-list td {
+    color: #666666;
+}
+
+.member-view>a {
+    color: deepskyblue;
+    margin: 0 12px;
+}
+
+.member-add {
+    text-indent: 50px;
+    ;
+}
+
+.member-add span {
+    color: #24cea4;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.member-contnet {
+    height: 365px;
+}
+
+.member-info {
+    width: 375px;
+    margin: 0 auto;
+    li {
+        padding-top: 18px;
+    }
+}
+
+.member-level {
+    width: 375px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 12px;
+    li {
+        width: 60px;
+        height: 28px;
+        float: left;
+        border: 1px solid #EEECEC;
+        color: #f59251;
+        border-radius: 28px;
+        text-align: center;
+        line-height: 28px;
+        margin-right: 18px;
+        cursor: pointer;
+    }
+    li:last-child {
+        margin-right: 0;
+    }
+    li.active {
+        background: #f59251;
+        color: white;
+        border: none;
+    }
+}
+
+.time-line-wrap {
+    width: 375px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 40px;
+    margin-top:24px;
+}
+
+.time-line {
+    width: 420px;
+    height: 32px;
+    line-height: 32px;
+    margin-left: -22px;
+    li {
+        float: left;
+        width: 70px;
+        border-bottom: 1px solid #bbb;
+        text-align: center;
+        position: relative;
+        span {
+            display: block;
+            width: 12px;
+            height: 12px;
+            position: absolute;
+            border-radius: 12px;
+            border: 1px solid #C0C0C0;
+            left: 50%;
+            margin-left: -6px;
+            bottom: -6px;
+            cursor: pointer;
+        }
+        &.active {
+            color: #f59251;
+        }
+        &.active>span {
+            width: 12px;
+            height: 12px;
+            border-radius: initial;
+            border: 2px solid #f59251;
+            -webkit-transform: rotateZ(45deg);
+            -webkit-transform-origin: center;
+        }
+    }
+}
+.price{
+    margin-top:30px;
+    text-align: center;
+    font-size:14px;
+    span{
+        color: firebrick;
+        font-size:24px;
+    }
+}

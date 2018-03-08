@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>俱乐部管理后台</title>
+		<link rel="stylesheet" type="text/css" href="../js/lib/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/toastr.js/2.1.4/toastr.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/common/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/index.css" />
+		<link rel="stylesheet" type="text/css" href="../css/createmodal.css" />
+		<link rel="stylesheet" type="text/css" href="../css/member.css" />
+	</head>
+
+	<body>
+		<div class="main" id="main">
+			<!--leftStrart-->
+			<div class="left">
+				<div class="logo">
+					<img src="../image/logo.png" />
+				</div>
+				<ul class="tabItem">
+					<li>
+						<img src="../image/icon/iconproject.png" />
+						<ul class="tabList">
+							<li>
+								<a href="../index.html"><img src="../image/Img_dealer.png" /> 德州扑克</a>
+							</li>
+							<li>
+								<a href="#"><img src="../image/Img_dealer.png" />斗地主</a>
+							</li>
+							<li>
+								<a href="#"><img src="../image/Img_dealer.png" />象棋</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<img src="../image/icon/iconFinance.png" />
+
+					</li>
+					<li class="active">
+						<a href="member.html">
+							<img src="../image/icon/iconMenmber_select.png" />
+						</a>
+
+					</li>
+					<li>
+						<a href="goodsorder.html">
+						<img src="../image/icon/icongoods.png" />
+</a>
+					</li>
+				</ul>
+				<div class="quit">
+					<a href="#">退出</a>
+				</div>
+				<!--leftEnd-->
+			</div>
+
+			<!--rightSrart-->
+
+			<div class="right member-wrap">
+				<!--headerStart-->
+				<div class="header">
+					<nav class="navbar navbar-default competition">
+						<div class="container-fluid">
+							<div class="navbar-header competition-type">
+								<a class="navbar-brand club-logo" href="#">
+									<!--	<img src="image/Img_dealer.png" alt="赛事类型logo" />-->
+								</a>
+							</div>
+							<div class="collapse navbar-collapse">
+								<ul class="nav navbar-nav now-competition">
+									<li class="active">
+										<a href="#">竞技扑克</a>
+									</li>
+									<li>
+										<a href="#">斗地主</a>
+									</li>
+									<li>
+										<a href="#">围棋</a>
+										<!--<ul class="create-competition">
+											<li>
+												<a href="#">本地模板</a>
+											</li>
+											<li>
+												<a href="#">系统模板</a>
+											</li>
+										</ul>-->
+									</li>
+									<li>
+										<a href="#">象棋</a>
+									</li>
+
+								</ul>
+
+							</div>
+							<!-- /.navbar-collapse -->
+						</div>
+						<!-- /.container-fluid -->
+					</nav>
+						<!--消息通知-->
+						<div class="member-badge" id="member-badge">
+							<div>
+							<i class="glyphicon glyphicon-bell "></i>
+								<span>
+									1
+								</span>
+								
+								<div class="infomation" id="infomation">
+									<ul class="infomation-item">
+										<li>
+											<span></span>
+											<a href="#">
+												系统消息:赛事审核通过，请按照规定举行赛事，绿色扑克，趣味竞技
+											</a>	
+										</li>
+										<li>
+											<span></span>
+											<a href="#">
+												系统消息:赛事审核通过，请按照规定举行赛事，绿色扑克，趣味竞技
+											</a>	
+										</li>
+										<li class="active">
+											<span></span>
+											<a href="#">
+												系统消息:赛事审核通过，请按照规定举行赛事，绿色扑克，趣味竞技
+											</a>	
+										</li>
+										
+									</ul>
+									<div class="view-more">
+										<a href="infomation.html"  >查看全部</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					<!--headerEnd-->
+				</div>
+				<!--contentStart-->
+				<div class="content">
+					<!--contentWrapStart-->
+					<div class="contentWrap noMargin pad20" id="contentWrap">
+						<div class="seach-header">
+							<div class="seach">
+								<div class="seach-btn">
+
+								</div>
+								<input type="text" class="seach-text" placeholder="输入ID/姓名/手机号/会员等级" />
+
+							</div>
+
+						</div>
+						<table class="table  table-striped table-hover member-list">
+							<thead>
+								<tr class="row">
+									<th class="col-md-1 text-center ">ID</th>
+									<th class="col-md-1 text-center">姓名</th>
+									<th class="col-md-2 text-center">手机号</th>
+									<th class="col-md-1 text-center">身份证号</th>
+									<th class="col-md-1 text-center">会员等级</th>
+									<th class="col-md-1 text-center">会员时限</th>
+									<th class="col-md-1 text-center">竞技积分</th>
+									<th class="col-md-1 text-center">大师分</th>
+									<th class="col-md-3 text-center">
+										查看
+									</th>
+								</tr>
+
+							</thead>
+
+							<tbody>
+								<tr class="row">
+									<td class="col-md-1 text-center ">0000001</td>
+									<td class="col-md-1 text-center">啥丢好</td>
+									<td class="col-md-2 text-center">18845679876</td>
+									<td class="col-md-1 text-center">130****3223</td>
+									<td class="col-md-1 text-center">LV5</td>
+									<td class="col-md-1 text-center">2018-12-20</td>
+									<td class="col-md-1 text-center">10000</td>
+									<td class="col-md-1 text-center">1000</td>
+									<td class="col-md-3 text-center member-view">
+										<a href="#">参赛票</a>
+										<a href="#">消费记录</a>
+										<a href="#">参赛详情</a>
+									</td>
+								</tr>
+								<tr class="row">
+									<td class="col-md-1 text-center ">0000001</td>
+									<td class="col-md-1 text-center">啥丢好</td>
+									<td class="col-md-2 text-center">18845679876</td>
+									<td class="col-md-1 text-center">130****3223</td>
+									<td class="col-md-1 text-center">LV5</td>
+									<td class="col-md-1 text-center">2018-12-20</td>
+									<td class="col-md-1 text-center">10000</td>
+									<td class="col-md-1 text-center">1000</td>
+									<td class="col-md-3 text-center member-view">
+										<a href="#">参赛票</a>
+										<a href="#">消费记录</a>
+										<a href="#">参赛详情</a>
+									</td>
+								</tr>
+								<tr class="row">
+									<td class="col-md-1 text-center ">0000001</td>
+									<td class="col-md-1 text-center">啥丢好</td>
+									<td class="col-md-2 text-center">18845679876</td>
+									<td class="col-md-1 text-center">130****3223</td>
+									<td class="col-md-1 text-center">LV5</td>
+									<td class="col-md-1 text-center">2018-12-20</td>
+									<td class="col-md-1 text-center">10000</td>
+									<td class="col-md-1 text-center">1000</td>
+									<td class="col-md-3 text-center member-view">
+										<a href="#">参赛票</a>
+										<a href="#">消费记录</a>
+										<a href="#">参赛详情</a>
+									</td>
+								</tr>
+								<tr class="row">
+									<td class="col-md-1 text-center ">0000001</td>
+									<td class="col-md-1 text-center">啥丢好</td>
+									<td class="col-md-2 text-center">18845679876</td>
+									<td class="col-md-1 text-center">130****3223</td>
+									<td class="col-md-1 text-center">LV5</td>
+									<td class="col-md-1 text-center member-view">
+										<a href="#">续费</a>
+									</td>
+									<td class="col-md-1 text-center">10000</td>
+									<td class="col-md-1 text-center">1000</td>
+									<td class="col-md-3 text-center member-view">
+										<a href="#">参赛票</a>
+										<a href="#">消费记录</a>
+										<a href="#">参赛详情</a>
+									</td>
+								</tr>
+								<tr class="row">
+									<td class="col-md-1 text-center ">0000001</td>
+									<td class="col-md-1 text-center">啥丢好</td>
+									<td class="col-md-2 text-center">18845679876</td>
+									<td class="col-md-1 text-center">130****3223</td>
+									<td class="col-md-1 text-center">LV5</td>
+									<td class="col-md-1 text-center">2018-12-20</td>
+									<td class="col-md-1 text-center">10000</td>
+									<td class="col-md-1 text-center">1000</td>
+									<td class="col-md-3 text-center member-view">
+										<a href="#">参赛票</a>
+										<a href="#">消费记录</a>
+										<a href="#">参赛详情</a>
+									</td>
+								</tr>
+								<tr class="row">
+									<td class="col-md-1 text-center ">0000001</td>
+									<td class="col-md-1 text-center">啥丢好</td>
+									<td class="col-md-2 text-center">18845679876</td>
+									<td class="col-md-1 text-center">130****3223</td>
+									<td class="col-md-1 text-center">LV5</td>
+									<td class="col-md-1 text-center">2018-12-20</td>
+									<td class="col-md-1 text-center">10000</td>
+									<td class="col-md-1 text-center">1000</td>
+									<td class="col-md-3 text-center member-view">
+										<a href="#">参赛票</a>
+										<a href="#">消费记录</a>
+										<a href="#">参赛详情</a>
+									</td>
+								</tr>
+								<tr class="row">
+									<td class="col-md-1 text-center ">0000001</td>
+									<td class="col-md-1 text-center">啥丢好</td>
+									<td class="col-md-2 text-center">18845679876</td>
+									<td class="col-md-1 text-center">130****3223</td>
+									<td class="col-md-1 text-center">LV5</td>
+									<td class="col-md-1 text-center">2018-12-20</td>
+									<td class="col-md-1 text-center">10000</td>
+									<td class="col-md-1 text-center">1000</td>
+									<td class="col-md-3 text-center member-view">
+										<a href="#">参赛票</a>
+										<a href="#">消费记录</a>
+										<a href="#">参赛详情</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="member-add"> <span data-toggle="modal" data-target="#member-add"><i class="glyphicon glyphicon-plus"></i> 添加会员</span></div>
+					
+						<!--contentWrapEnd-->
+					</div>
+					
+
+						<!--contentEnd-->
+					</div>
+					<div class="paging">
+						<div class=" prev ">
+							<a href="" class="glyphicon glyphicon-menu-left"></a> 
+						</div>
+								<ul class="page-item">
+									<li><a href="">1</a>  </li>
+									<li class="active"><a href="">2</a></li>
+									<li><a href="">3</a></li>
+								</ul>
+								<div class=" next">
+									<a href="#" class="glyphicon glyphicon-menu-right"></a>
+								</div>
+								<div class="total">
+									共<span>3</span>页
+								</div>
+
+						</div>
+					<!--rightEnd-->
+				</div>
+			</div>
+
+<div class="modal fade" id="member-add"  tabindex="-2" role="dialog" >
+			<div class="modal-dialog" role="document">
+				<div class="modal-content  create-modal member-modal">
+					<ul class="create-moddal-info member-modal-info">
+						<li>
+								<div class="create-header">
+								<!--<span class="glyphicon glyphicon-menu-left back">
+										
+									</span>-->
+									<div class="create-title">
+										添加会员
+									</div>
+									<span class="glyphicon glyphicon-remove close">
+									</span>
+								</div>
+								
+								<div class="create-content member-contnet">
+								
+										<ul class="member-info">
+											<li>
+												<input type="text" placeholder="请输入手机号(需要手机端注册)" class="form-control"/>
+											</li>
+											<li>
+												<input type="text" placeholder="输入姓名" class="form-control"/>
+											</li>
+											<li>
+												<input type="text" class="form-control"/>
+											</li>
+										</ul>
+										
+										<ul class="member-level">
+											<li class="active">LV1</li>
+											<li>LV2</li>
+											<li>LV3</li>
+											<li>LV4</li>
+											<li>LV5</li>
+										</ul>
+										<div class="time-line-wrap">
+										<ul class="time-line">
+											<li class="active">
+												日
+												<span >
+													
+												</span>
+											</li>
+											<li>
+												周
+												<span>
+													
+												</span>
+											</li>
+											<li>
+												月
+												<span>
+													
+												</span>
+											</li>
+											<li>
+												季
+												<span>
+													
+												</span>
+											</li>
+											
+											<li>
+												年
+												<span></span>
+											</li>
+											<li>
+												终身
+												<span></span>
+											</li>
+											
+											
+										</ul>
+										</div>
+										
+										<div  class="price">
+											请让用户支付:  <span>￥398</span>
+										</div>
+								</div>
+								
+								<div class="create-footer" style="text-align: center;">
+									<button type="button" class="template-next " >确定</button>
+								</div>
+						</li>
+					</ul>
+				</div>
+				<!-- /.modal-content -->
+			</div>
+			<!-- /.modal-dialog -->
+		</div>
+		<!-- /.modal -->
+		<!--}历史赛事-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<script src="../js/lib/require.js" defer async="true" data-main="../js/script/member" type="text/javascript"></script>
+	</body>
+
+</html>

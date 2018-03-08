@@ -1,0 +1,271 @@
+#create-modal > .modal-dialog,
+#history-modal > .modal-dialog,
+#regulations > .modal-dialog {
+  width: 1000px !important;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 8px; }
+
+.create-modal {
+  width: 1000px;
+  height: 600px; }
+
+.create-header {
+  height: 50px;
+  width: 100%;
+  background: #32323e;
+  color: white;
+  position: relative; }
+
+.create-moddal-info {
+  height: 600px;
+  width: 100%; }
+
+.back,
+.close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  color: white !important; }
+
+.back {
+  top: 0;
+  left: 0; }
+
+.close {
+  right: 0;
+  top: 0; }
+
+.create-title {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center; }
+  .create-title span {
+    padding: 0 46px;
+    color: #EEEEEE;
+    cursor: pointer; }
+    .create-title span.active {
+      color: #f7843f; }
+
+.create-content {
+  width: 656px;
+  height: 500px;
+  margin: 0 auto; }
+
+.create-type {
+  padding-top: 28px; }
+  .create-type .form-control {
+    height: 40px; }
+
+.competition-init-info {
+  width: 100%;
+  margin-top: 24px;
+  padding-left: 30px;
+  color: #333333; }
+
+.blinds {
+  width: 656px;
+  height: 36px;
+  margin-bottom: 0;
+  display: block; }
+  .blinds tbody {
+    display: block;
+    width: 656px;
+    height: 36px;
+    clear: both; }
+    .blinds tbody tr {
+      display: block;
+      width: 50%;
+      float: left;
+      height: 36px; }
+      .blinds tbody tr td, .blinds tbody tr th {
+        display: block;
+        width: 25%;
+        float: left;
+        border-top: none;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+        padding: 0; }
+
+.blinds-table {
+  height: 324px;
+  overflow: auto; }
+  .blinds-table li {
+    width: 50%;
+    float: left;
+    height: 36px; }
+    .blinds-table li span {
+      display: block;
+      width: 25%;
+      float: left;
+      border-top: none;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      padding: 0; }
+
+.create-footer {
+  height: 50px;
+  width: 100%; }
+  .create-footer .template-next {
+    display: block;
+    width: 100px;
+    height: 30px;
+    border-radius: 30px;
+    line-height: 30px;
+    background: #2a3244;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    margin: 0 auto; }
+
+.basic-info {
+  padding-top: 28px;
+  margin-bottom: 0; }
+  .basic-info > li {
+    margin-bottom: 20px; }
+    .basic-info > li .row {
+      margin-bottom: 0; }
+    .basic-info > li .form-control {
+      height: 40px; }
+
+.basic-info > li .form-control.basic-info-address {
+  display: block;
+  resize: none;
+  height: 138px; }
+
+.create-footer .template-public {
+  display: inline-block;
+  width: 130px;
+  margin: 0 10px; }
+
+.award {
+  height: 310px;
+  overflow-y: scroll; }
+
+.award > li {
+  margin-top: 30px; }
+
+.award .form-control {
+  height: 40px; }
+
+.award > li > ul > li {
+  text-align: center; }
+
+.award-title li {
+  text-align: center; }
+
+.add-award {
+  height: 26px;
+  width: 80px;
+  display: block;
+  line-height: 26px;
+  padding: 0;
+  text-align: center;
+  border-radius: 26px;
+  color: #C8C7CC;
+  background: white;
+  border: 1px dashed green; }
+
+.mixture-award > li > ul > li {
+  height: 90px;
+  text-align: center; }
+  .mixture-award > li > ul > li > .form-control {
+    margin-bottom: 10px; }
+
+.award-add {
+  float: left;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border: 1px dashed red;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 22px;
+  vertical-align: bottom;
+  margin-right: 12px;
+  cursor: pointer; }
+
+.award-remove {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  border: 1px dashed deepskyblue;
+  border-radius: 24px;
+  text-align: center;
+  line-height: 22px;
+  float: left;
+  vertical-align: bottom;
+  cursor: pointer; }
+
+.history-content {
+  width: 1000px;
+  padding: 0 60px 0 60px; }
+
+.hisory-list {
+  padding-top: 10px; }
+  .hisory-list li {
+    padding-top: 36px; }
+
+.history-info {
+  color: #666666; }
+  .history-info span {
+    padding: 0 6px; }
+
+.history-public {
+  text-align: right;
+  color: #ff8c3f; }
+  .history-public span {
+    padding: 0 6px;
+    cursor: pointer; }
+
+.mCSB_inside > .mCSB_container {
+  margin-right: 0; }
+
+.member-modal {
+  height: 470px;
+  width: 660px; }
+
+.create-moddal-info {
+  height: 470px; }
+
+.regulations-tab {
+  width: 536px;
+  height: 38px;
+  margin: 0 auto;
+  border-radius: 38px;
+  margin-top: 20px;
+  background: #F3F5F7; }
+  .regulations-tab li {
+    float: left;
+    text-align: center;
+    line-height: 38px;
+    position: relative;
+    cursor: pointer; }
+  .regulations-tab li span.active {
+    color: #FFA16C; }
+  .regulations-tab li:after {
+    content: "";
+    width: 0;
+    border-right: 2px solid #B1B7BB;
+    position: absolute;
+    right: 0;
+    height: 12px;
+    display: block;
+    top: 12px; }
+  .regulations-tab li:last-child:after {
+    content: initial; }
+
+.regulations-address {
+  height: 66px !important; }
+
+.rs-content {
+  height: 480px; }
+
+.rs-blinds {
+  height: 252px; }

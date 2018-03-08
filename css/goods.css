@@ -1,0 +1,13 @@
+.goods-seach {
+  margin: 30px 0; }
+  .goods-seach li {
+    float: left;
+    margin-right: 12px; }
+  .goods-seach input {
+    width: 160px;
+    background: #7A839C;
+    color: white; }
+  .goods-seach select {
+    width: 128px;
+    background: #7A839C;
+    color: white; }

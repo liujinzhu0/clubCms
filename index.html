@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>俱乐部管理后台</title>
+		
+		<link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="js/lib/bootstrap/css/bootstrap-theme.min.css" />
+		<link rel="stylesheet" type="text/css" media="all" href="js/lib/bootstrap/css/daterangepicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/common/jquery.mCustomScrollbar.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/common/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/common/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/createmodal.css" />
+	</head>
+	<body>
+		<div class="main">
+			<!--leftStrart-->
+			<div class="left">
+				<div class="logo">
+					<img src="image/logo.png" />
+				</div>
+				<ul class="tabItem">
+					<li class="active">
+						<img src="image/icon/iconproject_select.png" />
+						<ul class="tabList">
+							<li>
+								<a href="#"><img src="image/Img_dealer.png" /> 德州扑克</a>
+							</li>
+							<li>
+								<a href="#"><img src="image/Img_dealer.png" />斗地主</a>
+							</li>
+							<li>
+								<a href="#"><img src="image/Img_dealer.png" />象棋</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<img src="image/icon/iconFinance.png" />
+
+					</li>
+					<li>
+						<a href="page/member.html">
+							<img src="image/icon/iconMember.png" />
+						</a>
+					</li>
+					<li>
+						<a href="page/goodsorder.html">
+							<img src="image/icon/icongoods.png" />
+						</a>
+					</li>
+				</ul>
+				<div class="quit">
+					<a href="#">退出</a>
+				</div>
+				<!--leftEnd-->
+			</div>
+
+			<!--rightSrart-->
+
+			<div class="right">
+				<!--headerStart-->
+				<div class="header">
+
+					<nav class="navbar navbar-default competition">
+						<div class="container-fluid">
+							<div class="navbar-header competition-type">
+
+								<a class="navbar-brand club-logo" href="#">
+									<img src="image/Img_dealer.png" alt="赛事类型logo" />
+								</a>
+							</div>
+							<div class="collapse navbar-collapse" id="competition">
+								<ul class="nav navbar-nav now-competition">
+									<li class="active">
+										<a href="#">当前赛事</a>
+									</li>
+									<li data-toggle="modal" data-target="#history-modal">
+										<a href="#">历史赛事</a>
+									</li>
+									<li data-toggle="modal" data-target="#create-modal">
+										<a href="#">新建比赛</a>
+										<!--<ul class="create-competition">
+											<li>
+												<a href="#">本地模板</a>
+											</li>
+											<li>
+												<a href="#">系统模板</a>
+											</li>
+										</ul>-->
+									</li>
+
+								</ul>
+
+								<!--	<ul class="nav navbar-nav navbar-right competition-desk">
+									<li>
+										<a href="#">空闲桌子: <span>5</span> </a>
+									</li>
+									<li>
+										<a href="#">空闲Dealer: <span>8</span></a>
+									</li>
+								</ul>-->
+							</div>
+							<!-- /.navbar-collapse -->
+						</div>
+						<!-- /.container-fluid -->
+					</nav>
+					<!--消息通知-->
+					<div class="member-badge" id="member-badge">
+						<div>
+							<i class="glyphicon glyphicon-bell "></i>
+							<span>
+									1
+								</span>
+
+							<div class="infomation" id="infomation">
+								<ul class="infomation-item">
+									<li>
+										<span></span>
+										<a href="#">
+											系统消息:赛事审核通过，请按照规定举行赛事，绿色扑克，趣味竞技
+										</a>
+									</li>
+									<li>
+										<span></span>
+										<a href="#">
+											系统消息:赛事审核通过，请按照规定举行赛事，绿色扑克，趣味竞技
+										</a>
+									</li>
+									<li class="active">
+										<span></span>
+										<a href="#">
+											系统消息:赛事审核通过，请按照规定举行赛事，绿色扑克，趣味竞技
+										</a>
+									</li>
+
+								</ul>
+								<div class="view-more">
+									<a href="page/infomation.html">查看全部</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--headerEnd-->
+				</div>
+				<!--contentStart-->
+				<div class="content">
+					<!--dealerStart-->
+					<div class="dealer">
+						<h2 class="dealer-title">Dealer列表</h2>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+						<dl class="dealerItem">
+							<dt><img src="image/Img_dealer.png"/></dt>
+							<dd>Mary</dd>
+						</dl>
+
+						<ul class="dealer-bottom">
+							<li>上班</li>
+							<li>下班</li>
+							<li>删除</li>
+							<li>添加</li>
+						</ul>
+
+						<!--dealerEnd-->
+					</div>
+
+					<!--contentWrapStart-->
+					<div class="contentWrap" id="contentWrap">
+						<!--无比赛时显示{-->
+
+						<div class="no-competition" style="display: none;">
+							<img src="image/nocompetition.jpg" />
+						</div>
+
+						<!--}无比赛时显示-->
+						<!--有比赛时候显示的{-->
+						<div class="container container-fluid clubList">
+							
+							<!--比赛信息-->
+							<div class="game-item">
+								<ul class="game-info">
+									<li>MGM竞技棋牌开业赛</li>
+									<li>MTT</li>
+									<li><span>90</span>/120</li>
+									<li>3:30:13</li>
+								</ul>
+								<div class="game-option active">
+									<div class="glyphicon glyphicon-time"></div>
+									<ul>
+										<li>
+											<a href="#">比赛详情</a>
+										</li>
+										<li>
+											<a href="#">投影</a>
+										</li>
+										<li>
+											<a href="#">取消比赛</a>
+										</li>
+									</ul>
+
+								</div>
+								<!--比赛操作-->
+								<div class="btn-item">
+									<button type="button">开始</button>
+									<button type="button"><a href="page/setSeating.html">座次调整</a></button>
+									<button type="button">阶段调整</button>
+								</div>
+							</div> 
+
+							<!--桌子列表-->
+
+							<div class="row desk-item">
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+									<div class="desk desk1">
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-fg-4 col-lg-3 desk-item-list">
+									<div class="desk desk1">
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+							<!--比赛信息-->
+							<div class="game-item">
+								<ul class="game-info">
+									<li>MGM竞技棋牌开业赛</li>
+									<li>MTT</li>
+									<li><span>90</span>/120</li>
+									<li>3:30:13</li>
+								</ul>
+								<div class="game-option active">
+									<div class="glyphicon glyphicon-time "></div>
+									<ul>
+										<li>
+											<a href="#">比赛详情</a>
+										</li>
+										<li>
+											<a href="#">投影</a>
+										</li>
+										<li>
+											<a href="#">取消比赛</a>
+										</li>
+									</ul>
+
+								</div>
+								<!--比赛操作-->
+								<div class="btn-item">
+									<button type="button">开始</button>
+									<button type="button"><a href="page/setSeating.html">座次调整</a></button>
+									<button type="button">阶段调整</button>
+								</div>
+							</div>
+							<div class="row desk-item">
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+									<div class="desk desk1">
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class=" col-fg-4 col-lg-3 desk-item-list">
+
+									<div class="desk desk1">
+
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-6 col-fg-4 col-lg-3 desk-item-list">
+									<div class="desk desk1">
+										<div class="desk-info">
+											<p>桌号:010001</p>
+											<p>8/9</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--}有比赛时候显示-->
+						<!--contentWrapEnd-->
+					</div>
+					<!--contentEnd-->
+				</div>
+				<!--rightEnd-->
+			</div>
+		</div>
+
+		<div id="app">
+			<!--新建比赛{-->
+			<div class="modal fade" id="create-modal" tabindex="-1" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content  create-modal">
+
+						<ul class="create-moddal-info">
+							<li v-show="create=='sys-tmpl'">
+								<div class="create-header">
+									<!--<span class="glyphicon glyphicon-menu-left back">
+										
+									</span>-->
+									<div class="create-title">
+										<span :class="tmplType=='sysTmpl' ? 'active' : ''" @click="selectTmpl('sysTmpl')">
+											系统模板
+										</span> |
+										<span :class="tmplType=='localTmpl' ? 'active' : ''" @click="selectTmpl('localTmpl')">
+											本地模板
+										</span>
+									</div>
+									<span class="glyphicon glyphicon-remove close" @click="close('create-modal')">
+									</span>
+								</div>
+
+								<!--系统模板-->
+								<div class="create-content" v-show="tmplType == 'sysTmpl'">
+									<ul class="form-group row create-type">
+										<li class="col-md-3">
+											<select class="form-control" v-model="baseInfo.type">
+												<option value="0">MTT</option>
+												<option value="1">SNG</option>
+											</select>
+										</li>
+										<li class="col-md-3">
+											<input type="text" placeholder="人数" v-model="baseInfo.peopleNum" class="form-control" />
+										</li>
+										<li class="col-md-3">
+											<select class="form-control" v-model="baseInfo.competition">
+												<option value="0">周赛</option>
+												<option value="1">月赛</option>
+												<option value="2">年赛</option>
+											</select>
+										</li>
+
+										<li class="col-md-3">
+											<select class="form-control" v-model="baseInfo.agenda">
+												<option value="0">快速赛</option>
+												<option value="1">单桌赛</option>
+											</select>
+										</li>
+									</ul>
+									<div class="competition-init-info">
+										初始筹码 : <span>100000</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 涨盲时间: <span>10</span>分
+									</div>
+									<table class="table blinds">
+										<tbody>
+											<tr>
+												<th>阶段</th>
+												<th>前注</th>
+												<th>小盲</th>
+												<th>大盲</th>
+											</tr>
+											<tr>
+												<th>阶段</th>
+												<th>前注</th>
+												<th>小盲</th>
+												<th>大盲</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<ul class="blinds-table" id="blinds-table">
+
+										<li>
+											<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>2</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>3</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>4</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>5</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>6</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>7</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>8</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>9</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>10</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>11</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>12</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>13</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>14</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>15</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>16</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>17</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>18</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>19</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>20</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>21</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>22</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>23</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>24</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>25</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>26</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>27</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+										<li>
+											<span>28</span> <span>1</span> <span>1</span> <span>1</span>
+										</li>
+
+									</ul>
+								</div>
+								<!--本地模板-->
+								<div class="create-content history-content" v-show="tmplType == 'localTmpl'">
+									<ul class="hisory-list">
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="create-footer">
+									<button type="button" class="template-next" v-if="tmplType !=='localTmpl'" @click="createTmpl('basic-info')">下一步</button>
+								</div>
+							</li>
+							<li v-show="create=='basic-info'">
+								<div class="create-header">
+									<span class="glyphicon glyphicon-menu-left back" @click="back('sys-tmpl')">
+										
+									</span>
+									<div class="create-title">
+										基础信息
+									</div>
+									<span class="glyphicon glyphicon-remove close" @click="close('create-modal')">
+									</span>
+								</div>
+
+								<div class="create-content">
+									<ul class="form-group row basic-info">
+										<li class="col-md-12">
+											<input type="text" class="form-control" placeholder="输入比赛名称" />
+										</li>
+										<li class="col-md-12">
+
+											<ul class="row">
+												<li class="col-md-3">
+													<input type="text" class="form-control" id="dataRange"  placeholder="开赛时间" />
+												</li>
+
+												<li class="col-md-3">
+													<select class="form-control">
+														<option value="0">人数 (下限)</option>
+														<option value="1">6</option>
+														<option value="2">9</option>
+													</select>
+												</li>
+												<li class="col-md-3">
+													<select class="form-control ">
+														<option value="0">人数(上限)</option>
+														<option value="1">10</option>
+														<option value="2">20</option>
+													</select>
+												</li>
+											</ul>
+
+										</li>
+										<li class="col-md-12">
+											<ul class="row">
+												<li class="col-md-3">
+													<select class="form-control ">
+														<option value="0">Rebuy次数</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+													</select>
+												</li>
+
+												<li class="col-md-3">
+													<select class="form-control">
+														<option value="0">Rebuy(阶段)</option>
+														<option value="1">月赛</option>
+														<option value="2">年赛</option>
+													</select>
+												</li>
+												<li class="col-md-3">
+													<select class="form-control ">
+														<option value="0">Add-on阶段</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+													</select>
+												</li>
+												<li class="col-md-3">
+													<select class="form-control ">
+														<option value="0">Add-on筹码</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+													</select>
+												</li>
+
+											</ul>
+
+										</li>
+
+										<li class="col-md-12">
+											<ul class="row">
+												<li class="col-md-3">
+													<select class="form-control ">
+														<option value="0">积分和票券</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+													</select>
+												</li>
+
+												<li class="col-md-3">
+													<input type="text" class="form-control" placeholder="积分数量" />
+												</li>
+												<li class="col-md-3">
+													<select class="form-control ">
+														<option value="0">票券种类</option>
+														<option value="1">1</option>
+														<option value="2">2</option>
+													</select>
+												</li>
+											</ul>
+										</li>
+
+										<li class="col-md-12">
+											<input type="text" class="form-control" placeholder="地址栏" />
+										</li>
+										<li class="col-md-12">
+											<textarea class="form-control basic-info-address" placeholder="赛事简介"></textarea>
+										</li>
+									</ul>
+								</div>
+
+								<div class="create-footer">
+									<button type="button" class="template-next" v-on:click="basicInfo('award-info')">下一步</button>
+								</div>
+							</li>
+							<li v-show="create=='award-info'">
+								<div class="create-header">
+									<span class="glyphicon glyphicon-menu-left back" @click="back('basic-info')">
+										
+									</span>
+									<div class="create-title">
+										奖励信息
+									</div>
+									<span class="glyphicon glyphicon-remove close" @click="close('create-modal')">
+									</span>
+								</div>
+
+								<div class="create-content">
+									<ul class="form-group row basic-info">
+										<li class="col-md-12">
+											<select class="form-control " v-model="awardType" >
+												<option value="0" selected>默认奖励</option>
+												<option value="1">浮动奖励</option>
+												<option value="2">固定组合奖励</option>
+											</select>
+										
+										</li>
+										<li class="col-md-12">
+											<ul class="row award-title">
+												<li class="col-md-3">名次</li>
+												<li class="col-md-3">奖励类型</li>
+												<li class="col-md-5">奖励</li>
+											</ul>
+										</li>
+										<li class="col-md-12">
+
+											<!--默认奖励{-->
+												<div v-show='awardTmpl==0'>
+											<ul class="row award"  >
+												<li class="col-md-12"  v-for="(key,index) in mrjl">
+													<ul class="row ">
+														<li class="col-md-3">第{{ index+1 }}名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control" v-model='mrjl[index]["type"]' @change='mrjlMethod(index,mrjl[index]["type"])'>
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" v-model="mrjl[index]['num']" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3" v-if="index==mrjl.length-1">
+															<!--<span class="award-add">+</span>-->
+															<span class="award-remove" @click="removeRanking('mrjl')">-</span>
+														</li>
+													</ul>
+												</li>
+												<!--<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">第二名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<span class="award-add">+</span>
+															<span class="award-remove">-</span>
+														</li>
+													</ul>
+												</li>
+												<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">第三名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<span class="award-add">+</span>
+															<span class="award-remove">-</span>
+														</li>
+													</ul>
+												</li>-->
+											</ul>
+										<button class="add-award" type="button" @click="addRanking('mrjl')">添加名次</button>
+												</div>
+										<!--}默认奖励-->
+
+											<!--浮动奖励{-->
+												<div v-show='awardTmpl==1'>
+											<ul class="row award" >
+												<li class="col-md-12">
+													<ul class="row ">
+														<li class="col-md-3">第一名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<span class="award-add">+</span>
+															<span class="award-remove">-</span>
+														</li>
+													</ul>
+												</li>
+												<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">第二名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<span class="award-add">+</span>
+															<span class="award-remove">-</span>
+														</li>
+													</ul>
+												</li>
+												<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">第三名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<span class="award-add">+</span>
+															<span class="award-remove">-</span>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										<button class="add-award" type="button">添加名次</button>
+												</div> 
+										<!--}浮动奖励-->
+
+											<!--固定组合奖励{-->
+												<div v-show='awardTmpl==2'>
+											<ul class="row award mixture-award">
+												<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">第一名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<span class="award-add">+</span>
+															<span class="award-remove">-</span>
+														</li>
+													</ul>
+												</li>
+												<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">第二名</li>
+														<li class="col-md-3">
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+															<select name="" class="form-control">
+																<option value="0">积分</option>
+																<option value="1">票券</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<span class="award-add">+</span>
+															<span class="award-remove">-</span>
+														</li>
+													</ul>
+												</li>
+											</ul>
+													<button class="add-award" type="button">添加名次</button>
+												</div>
+											<!--}固定组合奖励-->
+
+										
+										</li>
+									</ul>
+								</div>
+
+								<div class="create-footer" style="text-align: center;">
+									<button type="button" class="template-next template-public" @click="publicGame">发布比赛</button>
+									<button type="button" class="template-next template-public" @click="saveAndPublic">保存模板并发布</button>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!--}新建比赛-->
+
+			<!--历史赛事{-->
+
+			<div class="modal fade" id="history-modal" tabindex="-2" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content  create-modal">
+						<ul class="create-moddal-info">
+							<li>
+								<div class="create-header">
+									<!--<span class="glyphicon glyphicon-menu-left back">
+										
+									</span>-->
+									<div class="create-title">
+										历史赛事
+									</div>
+									<span class="glyphicon glyphicon-remove close" @click="close('history-modal')">
+									</span>
+								</div>
+
+								<div class="create-content history-content">
+									<ul class="hisory-list">
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+										<li class="row">
+											<div class="col-md-8 history-info">
+												<span>MGM竞技棋牌开业赛</span>|
+												<span>MTT</span>|
+												<span>2017.08.21 <time>15:30</time></span>|
+												<span>90/120</span>
+											</div>
+											<div class="col-md-4 history-public">
+												<span @click="regulations">赛事详情</span>|
+												<span>再次发布</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+
+								<div class="create-footer" style="text-align: center;">
+									<!--<button type="button" class="template-next ">确定</button>-->
+								</div>
+							</li>
+						</ul>
+					</div>
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!--}历史赛事-->
+
+			<!--赛事详情{-->
+			<div class="modal fade" id="regulations" tabindex="-2" role="dialog">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content  create-modal">
+						<ul class="create-moddal-info" style="height: 600px;">
+							<li>
+								<div class="create-header">
+									<!--<span class="glyphicon glyphicon-menu-left back">
+										
+									</span>-->
+									<div class="create-title">
+										赛事详情
+									</div>
+									<span class="glyphicon glyphicon-remove close" @click="close('regulations')">
+									</span>
+								</div>
+
+								<!--create-content{-->
+								<div class="create-content rs-content">
+
+									<ul class="row regulations-tab">
+										<li class="col-md-4 text-center">
+											<span :class="rt=='basic' ?'active' : ''" @click="rTab('basic')">
+											基本信息
+											</span>
+										</li>
+										<li class="col-md-4 text-center">
+											<span :class="rt=='tmpl' ?'active' : ''" @click="rTab('tmpl')">
+											模板信息
+											</span>
+										</li>
+										<li class="col-md-4 text-center">
+											<span :class="rt=='award' ?'active' : ''" @click="rTab('award')">奖励信息</span>
+										</li>
+									</ul>
+									<!--赛事详情tabItem{-->
+									<ul class="regulations-list">
+										<!--赛事详情基本信息{-->
+										<li v-show="rt == 'basic'">
+											<ul class="form-group row basic-info">
+												<li class="col-md-12">
+													<input type="text" class="form-control" placeholder="输入比赛名称" />
+												</li>
+												<li class="col-md-12">
+
+													<ul class="row">
+														<li class="col-md-3">
+															<select class="form-control ">
+																<option value="0">开赛时间</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</li>
+
+														<li class="col-md-3">
+															<select class="form-control">
+																<option value="0">人数 (下限)</option>
+																<option value="1">6</option>
+																<option value="2">9</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<select class="form-control ">
+																<option value="0">人数(上限)</option>
+																<option value="1">10</option>
+																<option value="2">20</option>
+															</select>
+														</li>
+													</ul>
+
+												</li>
+												<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">
+															<select class="form-control ">
+																<option value="0">Rebuy次数</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</li>
+
+														<li class="col-md-3">
+															<select class="form-control">
+																<option value="0">Rebuy(阶段)</option>
+																<option value="1">月赛</option>
+																<option value="2">年赛</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<select class="form-control ">
+																<option value="0">Add-on阶段</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</li>
+														<li class="col-md-3">
+															<select class="form-control ">
+																<option value="0">Add-on筹码</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</li>
+
+													</ul>
+
+												</li>
+
+												<li class="col-md-12">
+													<ul class="row">
+														<li class="col-md-3">
+															<select class="form-control ">
+																<option value="0">积分和票券</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</li>
+
+														<li class="col-md-3">
+															<input type="text" class="form-control" placeholder="积分数量" />
+														</li>
+														<li class="col-md-3">
+															<select class="form-control ">
+																<option value="0">票券种类</option>
+																<option value="1">1</option>
+																<option value="2">2</option>
+															</select>
+														</li>
+													</ul>
+												</li>
+
+												<li class="col-md-12">
+													<input type="text" class="form-control" placeholder="地址栏" />
+												</li>
+												<li class="col-md-12">
+													<textarea class="form-control basic-info-address regulations-address" placeholder="赛事简介"></textarea>
+												</li>
+											</ul>
+										</li>
+										<!--}赛事详情基本信息-->
+
+										<!--赛事详情模板信息{-->
+
+										<li v-show="rt=='tmpl'">
+											<ul class="form-group row create-type">
+												<li class="col-md-3">
+													<select class="form-control" v-model="baseInfo.type">
+														<option value="0">MTT</option>
+														<option value="1">SNG</option>
+													</select>
+												</li>
+												<li class="col-md-3">
+													<input type="text" placeholder="人数" v-model="baseInfo.peopleNum" class="form-control" />
+												</li>
+												<li class="col-md-3">
+													<select class="form-control" v-model="baseInfo.competition">
+														<option value="0">周赛</option>
+														<option value="1">月赛</option>
+														<option value="2">年赛</option>
+													</select>
+												</li>
+
+												<li class="col-md-3">
+													<select class="form-control" v-model="baseInfo.agenda">
+														<option value="0">快速赛</option>
+														<option value="1">单桌赛</option>
+													</select>
+												</li>
+											</ul>
+											<div class="competition-init-info">
+												初始筹码 : <span>100000</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 涨盲时间: <span>10</span>分
+											</div>
+											<table class="table blinds">
+												<tbody>
+													<tr>
+														<th>阶段</th>
+														<th>前注</th>
+														<th>小盲</th>
+														<th>大盲</th>
+													</tr>
+													<tr>
+														<th>阶段</th>
+														<th>前注</th>
+														<th>小盲</th>
+														<th>大盲</th>
+													</tr>
+												</tbody>
+											</table>
+
+											<ul class="blinds-table rs-blinds" id="rs-blinds">
+
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+												<li>
+													<span>1</span> <span>1</span> <span>1</span> <span>1</span>
+												</li>
+
+											</ul>
+
+										</li>
+
+										<!--}赛事详情模板信息-->
+
+										<!--赛事详情奖励信息{-->
+
+										<li v-show="rt=='award'">
+											<ul class="form-group row basic-info">
+												<li class="col-md-12">
+													可选奖励
+												</li>
+
+												<li class="col-md-12">
+													<!--固定组合奖励{-->
+													<ul class="row award mixture-award" style="display: block;">
+														<li class="col-md-12">
+															<ul class="row">
+																<li class="col-md-3">第一名</li>
+																<li class="col-md-3">
+																	<select name="" class="form-control">
+																		<option value="0">积分</option>
+																		<option value="1">票券</option>
+																	</select>
+																	<select name="" class="form-control">
+																		<option value="0">积分</option>
+																		<option value="1">票券</option>
+																	</select>
+																</li>
+																<li class="col-md-5">
+																	<input type="text" class="form-control" placeholder="积分数量" />
+																	<input type="text" class="form-control" placeholder="积分数量" />
+																</li>
+															</ul>
+														</li>
+														<li class="col-md-12">
+															<ul class="row">
+																<li class="col-md-3">第二名</li>
+																<li class="col-md-3">
+																	<select name="" class="form-control">
+																		<option value="0">积分</option>
+																		<option value="1">票券</option>
+																	</select>
+																	<select name="" class="form-control">
+																		<option value="0">积分</option>
+																		<option value="1">票券</option>
+																	</select>
+																</li>
+																<li class="col-md-5">
+																	<input type="text" class="form-control" placeholder="积分数量" />
+																	<input type="text" class="form-control" placeholder="积分数量" />
+																</li>
+															</ul>
+														</li>
+
+														<li class="col-md-12">
+															<ul class="row">
+																<li class="col-md-3">第三名</li>
+																<li class="col-md-3">
+																	<select name="" class="form-control">
+																		<option value="0">积分</option>
+																		<option value="1">票券</option>
+																	</select>
+																	<select name="" class="form-control">
+																		<option value="0">积分</option>
+																		<option value="1">票券</option>
+																	</select>
+																</li>
+																<li class="col-md-5">
+																	<input type="text" class="form-control" placeholder="积分数量" />
+																	<input type="text" class="form-control" placeholder="积分数量" />
+																</li>
+															</ul>
+														</li>
+
+													</ul>
+
+													<!--}固定组合奖励-->
+
+												</li>
+											</ul>
+
+										</li>
+										<!--}赛事详情奖励信息-->
+
+									</ul>
+
+									<!--}赛事详情tabItem-->
+								</div>
+
+								<!--}create-content-->
+
+								<div class="create-footer" style="text-align: center;">
+									<button type="button" @click="close('regulations')" class="template-next ">确定</button>
+								</div>
+							</li>
+						</ul>
+
+					</div>
+
+					<!-- /.modal-content -->
+				</div>
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
+			<!--}赛事详情-->
+		</div>
+		<script src="js/lib/require.js" defer async="true" data-main="js/script/index" type="text/javascript"></script>
+	</body>
+
+
+</html>

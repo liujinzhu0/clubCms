@@ -1,0 +1,22 @@
+1.index.html 选择俱乐部后的主界面
+2.page/init.html 初始化的页面（登录进来后的页面）
+3.page/setSeating.html 设置座位
+4.page/member.html 会员管理页面
+
+
+
+class类名说明：
+1、main:为主容器
+2、left:为左侧侧边栏
+3、right:为右侧内容区域
+
+
+goods.js商品列表
+index.js 首页
+infomation.js 新闻消息
+member.js 会员操作
+modal.js 弹出框js
+setseating.js 换桌
+special.js 页面鼠标滑过特效
+
+
